@@ -1,0 +1,45 @@
+.header {
+    background-color: #F2CC85;
+}
+
+.navBar {
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height:100px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.navBar-list {
+    display: flex;
+    justify-content: left;
+    width: 800px;
+    padding: 0;
+}
+
+.navBar-list li {
+    padding: 0 20px;
+    transition: all 300ms;
+    list-style-type: none;
+}
+.navBar-list li:hover {
+    transform: scale(1.1);
+}
+
+.navBar-list a {
+    text-decoration: none;
+    color: black;
+}
+
+.widget {
+    width: 40px;
+    transition: 0.5s;
+}
+.widget:hover{
+    scale: 1.1;
+}
