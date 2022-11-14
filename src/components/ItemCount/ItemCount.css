@@ -1,0 +1,35 @@
+.buy {
+    display: flex;
+    width: 62.5%;
+    justify-content: space-around;
+    border-radius: 20px;
+}
+
+.buy-counter {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 20px;
+    border-radius: 20px;
+}
+
+.counter-btn {
+    border: none;
+    color: black;
+}
+
+.counter-number {
+    font-weight: 500;
+    font-size: 1.2rem;
+    width: 30px;
+    padding: 5px 5px;
+    margin: 10px 0;
+}
+
+.buy-add{
+    border: none;
+    border-radius: 20px;
+    padding: 5px;
+    color: black;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
