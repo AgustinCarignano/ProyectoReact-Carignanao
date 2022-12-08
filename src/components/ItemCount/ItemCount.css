@@ -1,15 +1,12 @@
 .buy {
     display: flex;
-    width: 62.5%;
-    justify-content: space-around;
-    border-radius: 20px;
+    flex-direction: column;
 }
 
 .buy-counter {
     display: flex;
-    justify-content: space-between;
-    margin-right: 20px;
-    border-radius: 20px;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 .counter-btn {
@@ -32,4 +29,8 @@
     color: black;
     font-weight: 500;
     font-size: 1.2rem;
+}
+
+.buy small {
+    font-size: 0.7rem;
 }

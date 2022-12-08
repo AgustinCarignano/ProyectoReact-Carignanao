@@ -1,10 +1,11 @@
-const products = [
+export const products = [
   {
     id: 1,
     title: "Heineken",
     subTitle: "Pack x6",
     price: 1250,
-    stock: 6,
+    discount: 0,
+    stock: 13,
     category: "cervezas",
     imgurl:
       "https://http2.mlstatic.com/D_NQ_NP_795471-MLA46568867977_062021-V.webp",
@@ -16,7 +17,8 @@ const products = [
     title: "Andes Origen",
     subTitle: "Pack x6",
     price: 1100,
-    stock: 15,
+    discount: 0,
+    stock: 14,
     category: "cervezas",
     imgurl:
       "https://http2.mlstatic.com/D_NQ_NP_718419-MLA44839770194_022021-V.webp",
@@ -28,7 +30,8 @@ const products = [
     title: "Andes IPA",
     subTitle: "Pack x6",
     price: 1200,
-    stock: 10,
+    discount: 0,
+    stock: 15,
     category: "cervezas",
     imgurl:
       "https://http2.mlstatic.com/D_NQ_NP_745870-MLA52024509773_102022-V.webp",
@@ -40,7 +43,8 @@ const products = [
     title: "Andes Roja",
     subTitle: "Pack x6",
     price: 1200,
-    stock: 15,
+    discount: 0,
+    stock: 16,
     category: "cervezas",
     imgurl:
       "https://http2.mlstatic.com/D_NQ_NP_654410-MLA44839773937_022021-V.webp",
@@ -52,7 +56,8 @@ const products = [
     title: "Andes Negra",
     subTitle: "Pack x6",
     price: 1200,
-    stock: 17,
+    discount: 0,
+    stock: 30,
     category: "cervezas",
     imgurl:
       "https://http2.mlstatic.com/D_NQ_NP_780484-MLA50761567246_072022-V.webp",
@@ -64,7 +69,8 @@ const products = [
     title: "Stella Artois",
     subTitle: "Pack x6",
     price: 1350,
-    stock: 12,
+    discount: 0.1,
+    stock: 30,
     category: "cervezas",
     imgurl:
       "https://http2.mlstatic.com/D_NQ_NP_842032-MLA44839776249_022021-V.webp",
@@ -76,7 +82,8 @@ const products = [
     title: "Stella Artois Noire",
     subTitle: "Pack x6",
     price: 1500,
-    stock: 7,
+    discount: 0,
+    stock: 18,
     category: "cervezas",
     imgurl:
       "https://http2.mlstatic.com/D_NQ_NP_956392-MLA44839778484_022021-V.webp",
@@ -88,7 +95,8 @@ const products = [
     title: "Corona Origen",
     subTitle: "Pack x6",
     price: 1600,
-    stock: 19,
+    discount: 0,
+    stock: 24,
     category: "cervezas",
     imgurl:
       "https://http2.mlstatic.com/D_NQ_NP_2X_849340-MLA51106110913_082022-F.webp",
@@ -100,7 +108,8 @@ const products = [
     title: "Quilmes Clasica",
     subTitle: "Pack x6",
     price: 980,
-    stock: 18,
+    discount: 0,
+    stock: 13,
     category: "cervezas",
     imgurl:
       "https://http2.mlstatic.com/D_NQ_NP_2X_874386-MLA44839809366_022021-F.webp",
@@ -112,7 +121,8 @@ const products = [
     title: "Imperial APA",
     subTitle: "Pack x6",
     price: 1420,
-    stock: 20,
+    discount: 0,
+    stock: 19,
     category: "cervezas",
     imgurl:
       "https://http2.mlstatic.com/D_NQ_NP_2X_936190-MLA44085396011_112020-F.webp",
@@ -124,7 +134,8 @@ const products = [
     title: "Imperial Lager",
     subTitle: "Pack x6",
     price: 1300,
-    stock: 12,
+    discount: 0,
+    stock: 24,
     category: "cervezas",
     imgurl:
       "https://http2.mlstatic.com/D_NQ_NP_2X_844784-MLA44085329653_112020-F.webp",
@@ -136,7 +147,8 @@ const products = [
     title: "Imperial Golden",
     subTitle: "Pack x6",
     price: 1350,
-    stock: 18,
+    discount: 0,
+    stock: 25,
     category: "cervezas",
     imgurl:
       "https://http2.mlstatic.com/D_NQ_NP_2X_922753-MLA44516664626_012021-F.webp",
@@ -148,7 +160,8 @@ const products = [
     title: "Imperial Cream Stout",
     subTitle: "Pack x6",
     price: 1350,
-    stock: 5,
+    discount: 0,
+    stock: 0,
     category: "cervezas",
     imgurl:
       "https://http2.mlstatic.com/D_NQ_NP_2X_890867-MLA42324039504_062020-F.webp",
@@ -160,7 +173,8 @@ const products = [
     title: "Imperial Roja",
     subTitle: "Pack x6",
     price: 1350,
-    stock: 16,
+    discount: 0,
+    stock: 28,
     category: "cervezas",
     imgurl:
       "https://http2.mlstatic.com/D_NQ_NP_2X_790987-MLA49524057162_032022-F.webp",
@@ -172,7 +186,8 @@ const products = [
     title: "Imperial IPA",
     subTitle: "Pack x6",
     price: 1420,
-    stock: 7,
+    discount: 0,
+    stock: 25,
     category: "cervezas",
     imgurl:
       "https://http2.mlstatic.com/D_NQ_NP_753456-MLA46888868201_072021-V.webp",
@@ -184,7 +199,8 @@ const products = [
     title: "Brahma",
     subTitle: "Pack x6",
     price: 950,
-    stock: 20,
+    discount: 0,
+    stock: 22,
     category: "cervezas",
     imgurl:
       "https://http2.mlstatic.com/D_NQ_NP_640945-MLA44839805234_022021-V.webp",
@@ -196,7 +212,8 @@ const products = [
     title: "Cinzano Rosso",
     subTitle: "Vermouth Americano",
     price: 1250,
-    stock: 19,
+    discount: 0,
+    stock: 17,
     category: "aperitivos",
     imgurl: "https://media-verticommnetwork1.netdna-ssl.com/wines/435280_p.jpg",
     description:
@@ -207,7 +224,8 @@ const products = [
     title: "Cinzano Bianco",
     subTitle: "Vermouth Bianco",
     price: 1250,
-    stock: 5,
+    discount: 0,
+    stock: 13,
     category: "aperitivos",
     imgurl:
       "https://http2.mlstatic.com/D_NQ_NP_836862-MLA50436713629_062022-V.webp",
@@ -219,7 +237,8 @@ const products = [
     title: "Aperol",
     subTitle: "Licor Italiano",
     price: 1600,
-    stock: 17,
+    discount: 0,
+    stock: 19,
     category: "aperitivos",
     imgurl: "https://media-verticommnetwork1.netdna-ssl.com/wines/892219_p.jpg",
     description:
@@ -230,7 +249,8 @@ const products = [
     title: "Puntemes",
     subTitle: "Vermouth Originale",
     price: 1200,
-    stock: 17,
+    discount: 0,
+    stock: 18,
     category: "aperitivos",
     imgurl: "https://media-verticommnetwork1.netdna-ssl.com/wines/483694_p.jpg",
     description:
@@ -241,7 +261,8 @@ const products = [
     title: "Cynar",
     subTitle: "Ricetta Originale",
     price: 1020,
-    stock: 8,
+    discount: 0.15,
+    stock: 28,
     category: "aperitivos",
     imgurl: "https://media-verticommnetwork1.netdna-ssl.com/wines/483250_p.jpg",
     description:
@@ -252,7 +273,8 @@ const products = [
     title: "Martini Rosso",
     subTitle: "L’aperitivo",
     price: 1000,
-    stock: 6,
+    discount: 0,
+    stock: 20,
     category: "aperitivos",
     imgurl:
       "https://http2.mlstatic.com/D_NQ_NP_710847-MLA44140886644_112020-V.webp",
@@ -264,9 +286,11 @@ const products = [
     title: "Martini Extra dry",
     subTitle: "L’aperitivo",
     price: 1300,
-    stock: 11,
+    discount: 0,
+    stock: 16,
     category: "aperitivos",
-    imgurl: "https://media-verticommnetwork1.netdna-ssl.com/wines/448525_p.jpg",
+    imgurl:
+      "https://s3-eu-west-1.amazonaws.com/adimo-image-cache/127e03b8-706c-41c2-a9ef-4e45e5728a08-6685088e-6278-45a8-aa31-3ad2199da86b.png",
     description:
       "Es elegante, delicado y muy fresco. Para muchos es el ingrediente básico para cualquier mezcla perfecta. Caracterizado por su color pálido y sus aromas frescos y afrutados, junto con un agudo perfume y una dulzura tentadora, es el lugar donde empezar para preparar un cóctel.",
   },
@@ -275,7 +299,8 @@ const products = [
     title: "Campari",
     subTitle: "Bitter",
     price: 1350,
-    stock: 5,
+    discount: 0,
+    stock: 14,
     category: "aperitivos",
     imgurl: "https://media-verticommnetwork1.netdna-ssl.com/wines/435198_p.jpg",
     description:
@@ -286,7 +311,8 @@ const products = [
     title: "Kilka",
     subTitle: "Malbec",
     price: 750,
-    stock: 8,
+    discount: 0,
+    stock: 22,
     category: "vinos",
     imgurl:
       "https://http2.mlstatic.com/D_NQ_NP_803157-MLA50432466156_062022-V.webp",
@@ -298,7 +324,8 @@ const products = [
     title: "Trumpeter",
     subTitle: "Cabernet sauvignon",
     price: 1350,
-    stock: 6,
+    discount: 0,
+    stock: 23,
     category: "vinos",
     imgurl:
       "https://http2.mlstatic.com/D_NQ_NP_790091-MLA43972770100_112020-V.webp",
@@ -310,7 +337,8 @@ const products = [
     title: "Trumpeter",
     subTitle: "Malbec",
     price: 1350,
-    stock: 5,
+    discount: 0,
+    stock: 24,
     category: "vinos",
     imgurl:
       "https://http2.mlstatic.com/D_NQ_NP_808289-MLA50019891358_052022-V.webp",
@@ -322,7 +350,8 @@ const products = [
     title: "Las perdices",
     subTitle: "Blend de tintas",
     price: 700,
-    stock: 7,
+    discount: 0,
+    stock: 20,
     category: "vinos",
     imgurl:
       "https://http2.mlstatic.com/D_NQ_NP_940543-MLA52106900662_102022-V.webp",
@@ -334,7 +363,8 @@ const products = [
     title: "Las perdices",
     subTitle: "Pinot noir",
     price: 1230,
-    stock: 13,
+    discount: 0,
+    stock: 16,
     category: "vinos",
     imgurl:
       "https://http2.mlstatic.com/D_NQ_NP_818027-MLA47133841095_082021-V.webp",
@@ -346,7 +376,8 @@ const products = [
     title: "Las perdices",
     subTitle: "Malbec Reserva",
     price: 1190,
-    stock: 19,
+    discount: 0,
+    stock: 28,
     category: "vinos",
     imgurl:
       "https://http2.mlstatic.com/D_NQ_NP_685644-MLA41986525820_052020-V.webp",
@@ -358,7 +389,8 @@ const products = [
     title: "Rutini",
     subTitle: "Malbec Reserva",
     price: 1970,
-    stock: 8,
+    discount: 0,
+    stock: 22,
     category: "vinos",
     imgurl:
       "https://http2.mlstatic.com/D_NQ_NP_826358-MLA49900398110_052022-V.webp",
@@ -370,7 +402,8 @@ const products = [
     title: "Rutini",
     subTitle: "Cabernet sauvignon",
     price: 1700,
-    stock: 11,
+    discount: 0,
+    stock: 22,
     category: "vinos",
     imgurl:
       "https://http2.mlstatic.com/D_NQ_NP_826358-MLA49900398110_052022-V.webp",
@@ -382,7 +415,8 @@ const products = [
     title: "La poderosa",
     subTitle: "Pinot noir",
     price: 780,
-    stock: 7,
+    discount: 0.1,
+    stock: 14,
     category: "vinos",
     imgurl:
       "https://http2.mlstatic.com/D_NQ_NP_760072-MLA42302043538_062020-V.webp",
@@ -394,7 +428,8 @@ const products = [
     title: "La poderosa",
     subTitle: "Cabernet Franc - Merlot",
     price: 740,
-    stock: 8,
+    discount: 0.1,
+    stock: 22,
     category: "vinos",
     imgurl:
       "https://http2.mlstatic.com/D_NQ_NP_790284-MLA51466791807_092022-V.webp",
@@ -406,7 +441,8 @@ const products = [
     title: "Escorihuela Gascon",
     subTitle: "Pinot noir",
     price: 1780,
-    stock: 20,
+    discount: 0,
+    stock: 18,
     category: "vinos",
     imgurl:
       "https://http2.mlstatic.com/D_NQ_NP_697597-MLA50132327438_052022-V.webp",
@@ -418,7 +454,8 @@ const products = [
     title: "Escorihuela Gascon",
     subTitle: "Malbec",
     price: 1630,
-    stock: 9,
+    discount: 0,
+    stock: 18,
     category: "vinos",
     imgurl:
       "https://http2.mlstatic.com/D_NQ_NP_673918-MLA51359731524_082022-V.webp",
@@ -430,7 +467,8 @@ const products = [
     title: "Santa Julia",
     subTitle: "Dulce tinto natural",
     price: 920,
-    stock: 12,
+    discount: 0,
+    stock: 27,
     category: "vinos",
     imgurl:
       "https://http2.mlstatic.com/D_NQ_NP_611330-MLA50206558135_062022-V.webp",
@@ -442,7 +480,8 @@ const products = [
     title: "Santa Julia",
     subTitle: "Bonarda",
     price: 860,
-    stock: 6,
+    discount: 0,
+    stock: 22,
     category: "vinos",
     imgurl:
       "https://http2.mlstatic.com/D_NQ_NP_772588-MLA50206603772_062022-V.webp",
@@ -454,7 +493,8 @@ const products = [
     title: "Trumpeter",
     subTitle: "Chardonnay",
     price: 1460,
-    stock: 16,
+    discount: 0,
+    stock: 25,
     category: "vinos",
     imgurl:
       "https://http2.mlstatic.com/D_NQ_NP_693063-MLA42020349835_052020-V.webp",
@@ -466,7 +506,8 @@ const products = [
     title: "Trumpeter",
     subTitle: "Sauvignon blanc",
     price: 1660,
-    stock: 10,
+    discount: 0,
+    stock: 13,
     category: "vinos",
     imgurl:
       "https://http2.mlstatic.com/D_NQ_NP_691796-MLA44927010112_022021-V.webp",
@@ -478,7 +519,8 @@ const products = [
     title: "Lopez",
     subTitle: "Dulce natural",
     price: 690,
-    stock: 16,
+    discount: 0,
+    stock: 20,
     category: "vinos",
     imgurl:
       "https://http2.mlstatic.com/D_NQ_NP_612675-MLA47010156095_082021-V.webp",
@@ -490,7 +532,8 @@ const products = [
     title: "Lopez",
     subTitle: "Sauvignon blanc",
     price: 450,
-    stock: 16,
+    discount: 0,
+    stock: 15,
     category: "vinos",
     imgurl:
       "https://http2.mlstatic.com/D_NQ_NP_721123-MLA50998811818_082022-V.webp",
@@ -502,7 +545,8 @@ const products = [
     title: "Cafayate",
     subTitle: "Chardonnay",
     price: 550,
-    stock: 10,
+    discount: 0,
+    stock: 19,
     category: "vinos",
     imgurl:
       "https://http2.mlstatic.com/D_NQ_NP_689137-MLA49924573118_052022-V.webp",
@@ -514,7 +558,8 @@ const products = [
     title: "Cafayate",
     subTitle: "Torrontes",
     price: 530,
-    stock: 6,
+    discount: 0,
+    stock: 29,
     category: "vinos",
     imgurl:
       "https://http2.mlstatic.com/D_NQ_NP_900085-MLA44220003837_122020-V.webp",
@@ -526,7 +571,8 @@ const products = [
     title: "Johnny Walker",
     subTitle: "Black label",
     price: 8500,
-    stock: 12,
+    discount: 0,
+    stock: 16,
     category: "espirituosas",
     imgurl:
       "https://media-verticommnetwork1.netdna-ssl.com/wines/1454630_p.jpg",
@@ -538,7 +584,8 @@ const products = [
     title: "Johnny Walker",
     subTitle: "Gold label",
     price: 13700,
-    stock: 15,
+    discount: 0,
+    stock: 28,
     category: "espirituosas",
     imgurl: "https://media-verticommnetwork1.netdna-ssl.com/wines/833271_p.jpg",
     description:
@@ -549,7 +596,8 @@ const products = [
     title: "Jameson",
     subTitle: "Black barrel",
     price: 4300,
-    stock: 13,
+    discount: 0,
+    stock: 20,
     category: "espirituosas",
     imgurl:
       "https://media-verticommnetwork1.netdna-ssl.com/wines/1192793_p.jpg",
@@ -561,7 +609,8 @@ const products = [
     title: "Johnny Walker",
     subTitle: "Red label",
     price: 6400,
-    stock: 9,
+    discount: 0,
+    stock: 22,
     category: "espirituosas",
     imgurl:
       "https://http2.mlstatic.com/D_NQ_NP_831527-MLA45319126330_032021-V.webp",
@@ -573,7 +622,8 @@ const products = [
     title: "Chivas Regal",
     subTitle: "Blended Scotch Whisky",
     price: 5400,
-    stock: 20,
+    discount: 0,
+    stock: 23,
     category: "espirituosas",
     imgurl:
       "https://http2.mlstatic.com/D_NQ_NP_607103-MLA50056333219_052022-V.webp",
@@ -585,7 +635,8 @@ const products = [
     title: "Ballantines",
     subTitle: "Blended Scotch Whisky",
     price: 5200,
-    stock: 20,
+    discount: 0,
+    stock: 0,
     category: "espirituosas",
     imgurl:
       "https://http2.mlstatic.com/D_NQ_NP_711844-MLA51293877465_082022-V.webp",
@@ -597,7 +648,8 @@ const products = [
     title: "Jack Daniel’s",
     subTitle: "Tennessee Honey",
     price: 8900,
-    stock: 16,
+    discount: 0,
+    stock: 22,
     category: "espirituosas",
     imgurl:
       "https://http2.mlstatic.com/D_NQ_NP_704045-MLA44850206709_022021-V.webp",
@@ -609,7 +661,8 @@ const products = [
     title: "Absolut",
     subTitle: "Azul classic",
     price: 2770,
-    stock: 12,
+    discount: 0,
+    stock: 28,
     category: "espirituosas",
     imgurl: "https://media-verticommnetwork1.netdna-ssl.com/wines/920226_p.jpg",
     description:
@@ -620,7 +673,8 @@ const products = [
     title: "Smirnoff",
     subTitle: "Vodka",
     price: 1090,
-    stock: 18,
+    discount: 0,
+    stock: 14,
     category: "espirituosas",
     imgurl:
       "https://http2.mlstatic.com/D_NQ_NP_784549-MLA43807178122_102020-V.webp",
@@ -632,7 +686,8 @@ const products = [
     title: "Beluga Noble",
     subTitle: "Noble Russian Vodka",
     price: 5930,
-    stock: 8,
+    discount: 0,
+    stock: 20,
     category: "espirituosas",
     imgurl:
       "https://http2.mlstatic.com/D_NQ_NP_894354-MLA47460433531_092021-V.webp",
@@ -644,7 +699,8 @@ const products = [
     title: "Bombay",
     subTitle: "London Dry Gin",
     price: 5320,
-    stock: 14,
+    discount: 0,
+    stock: 27,
     category: "espirituosas",
     imgurl: "https://media-verticommnetwork1.netdna-ssl.com/wines/445442_p.jpg",
     description:
@@ -655,7 +711,8 @@ const products = [
     title: "Bulldog",
     subTitle: "London Dry Gin",
     price: 4750,
-    stock: 19,
+    discount: 0,
+    stock: 14,
     category: "espirituosas",
     imgurl: "https://media-verticommnetwork1.netdna-ssl.com/wines/885943_p.jpg",
     description:
@@ -666,7 +723,8 @@ const products = [
     title: "Tanqueray",
     subTitle: "London Dry Gin",
     price: 3650,
-    stock: 12,
+    discount: 0,
+    stock: 27,
     category: "espirituosas",
     imgurl:
       "https://media-verticommnetwork1.netdna-ssl.com/wines/1757707_p.jpg",
@@ -678,7 +736,8 @@ const products = [
     title: "Beefeater",
     subTitle: "London Dry Gin",
     price: 3400,
-    stock: 9,
+    discount: 0,
+    stock: 13,
     category: "espirituosas",
     imgurl:
       "https://http2.mlstatic.com/D_NQ_NP_995832-MLA51838188478_102022-V.webp",
@@ -690,7 +749,8 @@ const products = [
     title: "Beefeater",
     subTitle: "London Pink Strawberry",
     price: 4020,
-    stock: 10,
+    discount: 0,
+    stock: 14,
     category: "espirituosas",
     imgurl:
       "https://http2.mlstatic.com/D_NQ_NP_875160-MLA50058020774_052022-V.webp",
@@ -702,7 +762,8 @@ const products = [
     title: "Heraclito",
     subTitle: "London Dry Gin",
     price: 2130,
-    stock: 11,
+    discount: 0.2,
+    stock: 19,
     category: "espirituosas",
     imgurl:
       "https://http2.mlstatic.com/D_NQ_NP_621878-MLA50260954091_062022-V.webp",

@@ -1,24 +1,23 @@
-import React, { useEffect, useState } from 'react';
-import { getProduct } from '../../services/mockService';
-import ItemDetail from './ItemDetail';
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { getProduct } from "../../services/firebaseService";
+import ItemDetail from "./ItemDetail";
+import Loader from "../Loader/Loader";
 
 function ItemDetailContainer() {
-    const [product, setProduct]=useState([]);
-    const {id} = useParams();
+  const [product, setProduct] = useState([]);
+  const { id } = useParams();
 
-    async function getItem() {
-        let respuesta = await getProduct(id);
-        setProduct(respuesta);
-    }
+  async function getItem() {
+    let respuesta = await getProduct(id, "data");
+    setProduct(respuesta);
+  }
 
-    useEffect( ()=> {
-        getItem();
-    },[id])
+  useEffect(() => {
+    getItem();
+  }, [id]);
 
-  return (
-    <ItemDetail product={product} />
-  )
+  return product.length === 0 ? <Loader /> : <ItemDetail product={product} />;
 }
 
-export default ItemDetailContainer
+export default ItemDetailContainer;

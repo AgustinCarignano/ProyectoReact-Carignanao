@@ -1,0 +1,35 @@
+.emptyPage{
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 20px;
+    margin: 20vh auto;
+}
+
+.order {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border-radius: 20px;
+    margin: 20px auto 40px;
+    width: 900px;
+}
+
+.order-detail {
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr;
+    width: 90%;
+    padding-bottom: 30px;
+}
+
+.order-detail > div{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.order-detail h4{
+    margin: 5px 0;
+}
+.order-detail p{
+    margin: 5px 0;
+}

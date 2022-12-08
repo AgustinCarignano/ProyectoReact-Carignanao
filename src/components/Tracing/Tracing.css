@@ -1,0 +1,15 @@
+.tracing{
+    background-color: white;
+    border-radius: 20px;
+    margin: 20px auto 40px;
+    padding: 20px 0;
+    width: 500px;
+}
+
+.tracing-form label {
+    margin-right: 20px;
+}
+
+.tracing-form input{
+    width: 200px;
+}

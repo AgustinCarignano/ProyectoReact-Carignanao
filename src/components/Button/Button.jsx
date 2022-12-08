@@ -1,10 +1,15 @@
-import React from 'react'
-import "./Button.css"
+import React from "react";
+import "./Button.css";
 
 function Button(props) {
   return (
-    <button className='btn' onClick={props.onClick}>{props.text}</button>
-  )
+    <button
+      className={`btn btn-${props.show}`}
+      onClick={props.onClick && (() => props.onClick(props.cant))}
+    >
+      {props.text}
+    </button>
+  );
 }
 
-export default Button
+export default Button;

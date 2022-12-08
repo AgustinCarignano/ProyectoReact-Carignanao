@@ -1,24 +1,63 @@
-import './App.css';
-import NavBar from './components/NavBar/NavBar';
-import ItemListContainer from './components/ItemList/ItemListContainer';
-import ItemDetailContainer from './components/ItemDetails/ItemDetailContainer';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { CartContextProvider } from "./Contexts/cartContext";
+import { FavContextProvider } from "./Contexts/favContext";
+import { SearchContextProvider } from "./Contexts/searchContext";
+import NavBar from "./components/NavBar/NavBar";
+import ItemListContainer from "./components/ItemList/ItemListContainer";
+import ItemDetailContainer from "./components/ItemDetails/ItemDetailContainer";
+import Cart from "./components/Cart/Cart";
+import Favourites from "./components/Favourites/Favourites";
+import Footer from "./components/Footer/Footer";
+import Order from "./components/Order/Order";
+import Checkout from "./components/Checkout/Checkout";
+import Button from "./components/Button/Button";
+import Tracing from "./components/Tracing/Tracing";
+import "./App.css";
 
 function App() {
   return (
-    <BrowserRouter>
-      <div className="App">
-        <NavBar />
-        <Routes>
-          <Route path="/" element={<ItemListContainer /* greeting="Elige tu producto y agregalo al carrito" *//>} />
-          <Route path="/categorias/:cat" element={<ItemListContainer />} />
-          <Route path="/productos/:id" element={<ItemDetailContainer />} />
-          <Route path="/cart" element={<h1 style={{color: "white"}}>Ooops, no hay nada por aqui aun. El sitio se encuentra en construcción</h1>} />
-          
-          <Route path="*" element={<h1 style={{color: "white"}}>Error 404: La dirección que buscas no existe</h1>} />
-        </Routes>
-      </div>
-    </BrowserRouter>
+    <CartContextProvider>
+      <FavContextProvider>
+        <SearchContextProvider>
+          <BrowserRouter>
+            <div className="App">
+              <NavBar />
+              <Routes>
+                <Route path="/" element={<ItemListContainer />} />
+                <Route
+                  path="/categorias/:cat"
+                  element={<ItemListContainer />}
+                />
+                <Route
+                  path="/productos/:id"
+                  element={<ItemDetailContainer />}
+                />
+                <Route path="/favoritos" element={<Favourites />} />
+                <Route path="/cart" element={<Cart />} />
+                <Route path="/checkout" element={<Checkout />} />
+                <Route path="/tracing" element={<Tracing />} />
+                <Route path="/pedidos/:orderId" element={<Order />} />
+
+                <Route
+                  path="*"
+                  element={
+                    <div>
+                      <h1 style={{ color: "white" }}>
+                        Error 404: Dirección no válida
+                      </h1>
+                      <Link to="/">
+                        <Button text="Ir al home" />
+                      </Link>
+                    </div>
+                  }
+                />
+              </Routes>
+              <Footer />
+            </div>
+          </BrowserRouter>
+        </SearchContextProvider>
+      </FavContextProvider>
+    </CartContextProvider>
   );
 }
 

@@ -1,28 +1,77 @@
-import React from 'react'
-import Button from '../Button/Button'
-import ItemCount from '../ItemCount/ItemCount'
-import "./ItemDetail.css"
-import { Link } from "react-router-dom"
+import React, { useContext } from "react";
+import { Link } from "react-router-dom";
+import { cartContext } from "../../Contexts/cartContext";
+import Button from "../Button/Button";
+import ItemCount from "../ItemCount/ItemCount";
+import "./ItemDetail.css";
 
-function ItemDetail({product}) {
+function ItemDetail({ product }) {
+  const [addOption, setaddOption] = React.useState(true);
+  const { addToCart, itemQuantity } = useContext(cartContext);
+
+  function addedToCart(cant) {
+    setaddOption(false);
+    addToCart(product, cant);
+  }
+
   return (
-    <div className='itemDetail'>
+    <div className="itemDetail">
       <div className="itemDetail-img">
-        <img src={product.imgurl} alt={product.title} className="itemDetail-img" />
+        <img
+          src={product.imgurl}
+          alt={product.title}
+          className="itemDetail-img"
+        />
       </div>
-        <h2>{product.title}</h2>
-        <h5>{product.subTitle}</h5>
-        <p><b>Descripcion del producto:</b><br/>{product.description}</p>
-        <div className='itemDetail-addToCart'>
-          <h5>Precio: ${product.price}</h5>
-          <ItemCount init={1} stock={product.stock} />
+      <h2>{product.title}</h2>
+      <h6>{product.subTitle}</h6>
+      {product.discount > 0 ? (
+        <h5>
+          Precio:{" "}
+          <small style={{ textDecoration: "line-through" }}>
+            ${product.price}
+          </small>{" "}
+          ${product.price * (1 - product.discount)}
+        </h5>
+      ) : (
+        <h5>Precio: ${product.price}</h5>
+      )}
+      {product.discount > 0 && (
+        <small style={{ color: "green", fontWeight: "bold" }}>
+          {product.discount * 100}% Off
+        </small>
+      )}
+      <p>
+        <b>Descripcion del producto:</b>
+        <br />
+        {product.description}
+      </p>
+      {product.stock === 0 ? (
+        <p>
+          <b>Sin stock disponible</b>
+        </p>
+      ) : (
+        <div className="itemDetail-addToCart">
+          {addOption ? (
+            <ItemCount
+              init={() => itemQuantity(product)}
+              stock={product.stock}
+              changeCondition={addedToCart}
+              isInCart={addOption}
+              showButtonAddToCart={true}
+            />
+          ) : (
+            <Link to="/cart">
+              <Button text="Ver el carrito" show="bigger"></Button>
+            </Link>
+          )}
         </div>
-        <span className='description-stock'>Stock disponible: {product.stock}</span>
-        <Link to="/">
-          <Button text="Menú principal" />
-        </Link>
+      )}
+      <Link to="/">
+        <Button text="Volver a navegación" show="smaller" />
+      </Link>
     </div>
-  )
+  );
 }
 
-export default ItemDetail
+export default ItemDetail;
