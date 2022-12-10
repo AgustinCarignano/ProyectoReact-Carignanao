@@ -10,7 +10,7 @@ Desde el menú de navegación se pueden seleccionar diferentes categorías de be
 
 Desde el carrito de compras, el usuario tiene la posibilidad de agregar o quitar items, y enviar una orden de compra luego de rellenar un breve formulario con sus datos personales.
 
-![Breve visualización de la webApp](https://i.imgur.com/AGacAq7.gifv)
+![Breve visualización de la webApp](https://i.imgur.com/AGacAq7.gif)
 
 ## Características del proyecto
 
