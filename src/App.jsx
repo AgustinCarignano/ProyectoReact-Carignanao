@@ -8,7 +8,7 @@ import ItemDetailContainer from "./components/ItemDetails/ItemDetailContainer";
 import Cart from "./components/Cart/Cart";
 import Favourites from "./components/Favourites/Favourites";
 import Footer from "./components/Footer/Footer";
-import Order from "./components/Order/Order";
+import OrderContainer from "./components/Order/OrderContainer";
 import Checkout from "./components/Checkout/Checkout";
 import Button from "./components/Button/Button";
 import Tracing from "./components/Tracing/Tracing";
@@ -36,7 +36,10 @@ function App() {
                 <Route path="/cart" element={<Cart />} />
                 <Route path="/checkout" element={<Checkout />} />
                 <Route path="/tracing" element={<Tracing />} />
-                <Route path="/pedidos/:orderId" element={<Order />} />
+                <Route
+                  path="/pedidos/:orderParam"
+                  element={<OrderContainer />}
+                />
 
                 <Route
                   path="*"

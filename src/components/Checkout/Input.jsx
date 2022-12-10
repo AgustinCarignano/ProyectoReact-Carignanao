@@ -9,6 +9,7 @@ function Input(props) {
         type={props.inputType}
         onChange={props.onChange && props.onChange}
         value={props.value}
+        disabled={props.disabled && props.disabled}
       />
     </div>
   );

@@ -17,16 +17,16 @@ function ItemListContainer() {
   const { searchWord, newSearch } = useContext(searchContext);
   const [showBanner, setShowBanner] = useState(false);
 
+  //Función para obtener los items a mostrar, dependiendo de la ruta ejecuta una de las funciones del archivo firebaseService.
   async function getItems() {
     let respuesta;
     if (!cat) {
       respuesta = await getProducts();
       setShowBanner(true);
-    } else if (cat == "ofertas") {
+    } else if (cat === "ofertas") {
       respuesta = await getProductsInOffer();
       setShowBanner(false);
-    } else if (cat == "busqueda") {
-      // respuesta = productsSearched;
+    } else if (cat === "busqueda") {
       respuesta = await getSearchedItems(searchWord);
       setShowBanner(false);
       respuesta.length === 0

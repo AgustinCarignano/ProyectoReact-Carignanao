@@ -9,6 +9,7 @@ function NavBar() {
   const { handleOnSubmit, handleOnChange } = useContext(searchContext);
   const Navigate = useNavigate();
 
+  //Función para ejecutar la búsqueda de productos y limpiar el input. Luego navega a la ruta de "busqueda"
   function handleLocalOnSubmit(e) {
     e.preventDefault();
     handleOnSubmit();
@@ -16,6 +17,7 @@ function NavBar() {
     Navigate("/categorias/busqueda");
   }
 
+  //Función para mostrar u ocultar el menú desplegable de "categorías"
   function toggleCategoryOptions() {
     setShowCategoryOptions(!showCategoryOptions);
   }
@@ -47,6 +49,7 @@ function NavBar() {
             Categorias{" "}
             <img
               src="https://www.svgrepo.com/show/80156/down-arrow.svg"
+              alt="carrito de compras"
               className={classNameCategoryArrow}
             ></img>
             <ul className={classNameCategoryOptions}>

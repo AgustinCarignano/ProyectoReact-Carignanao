@@ -8,6 +8,7 @@ function ItemDetailContainer() {
   const [product, setProduct] = useState([]);
   const { id } = useParams();
 
+  //Obtención de un item de la colección de productos
   async function getItem() {
     let respuesta = await getProduct(id, "data");
     setProduct(respuesta);

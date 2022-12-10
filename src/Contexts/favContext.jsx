@@ -5,6 +5,7 @@ export const favContext = createContext([]);
 export function FavContextProvider({ children }) {
   const [favList, setFavList] = useState([]);
 
+  //Agregar o quitar de favoritos un producto.
   function putInFav(product) {
     let auxFavList = [...favList];
     let isInFav = auxFavList.some((el) => el.id === product.id);

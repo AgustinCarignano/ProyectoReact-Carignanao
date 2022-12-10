@@ -5,9 +5,12 @@ import "./ItemCount.css";
 function ItemCount(props) {
   const [number, setNumber] = useState(props.init);
 
+  //Resta un item, siempre que el valor sea mayor a 1
   function handleClickRestar() {
     number > 1 && setNumber(number - 1);
   }
+
+  //Suma un item, siempre que el valor sea menor al stock disponible
   function handleClickSumar() {
     number < props.stock && setNumber(number + 1);
   }

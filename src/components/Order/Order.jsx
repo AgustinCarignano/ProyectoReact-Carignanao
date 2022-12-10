@@ -1,23 +1,23 @@
 import React, { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { getProduct } from "../../services/firebaseService";
 import Button from "../Button/Button";
 import Loader from "../Loader/Loader";
 import "./Order.css";
 
-function Order() {
+function Order(props) {
   const [ordered, setOrdered] = useState([]);
   const [error, setError] = useState(false);
-  const { orderId } = useParams();
 
+  //Función para obtener los datos de una orden realiada.
   async function followOrder() {
-    let respuesta = await getProduct(orderId, "orders");
+    let respuesta = await getProduct(props.orderId, "orders");
     respuesta ? setOrdered(respuesta) : setError(true);
   }
 
   useEffect(() => {
     followOrder();
-  }, [orderId, error]);
+  }, [props.orderId, error]);
 
   if (error) {
     return (
@@ -37,7 +37,7 @@ function Order() {
   ) : (
     <div className="order">
       <h2 className="order-title">
-        ID de seguimiento: <small>{orderId}</small>
+        ID de seguimiento: <small>{props.orderId}</small>
       </h2>
       <div className="order-detail">
         <div>
@@ -64,6 +64,14 @@ function Order() {
           <h4>Estado</h4>
           <p>En proceso</p>
         </div>
+      </div>
+      <div className="order-buttons">
+        <Link to="/tracing">
+          <Button text="Seguimiento" />
+        </Link>
+        <Link to="/">
+          <Button text="Home" />
+        </Link>
       </div>
     </div>
   );

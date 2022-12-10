@@ -18,6 +18,7 @@ function Checkout() {
   const { cart, cartTotalPrice, cleanCart } = useContext(cartContext);
   const Navigate = useNavigate();
 
+  //Crea la orden para luego cargarla en firestore y redirije a la página de "seguimiento"
   async function handleCheckout(e) {
     e.preventDefault();
     setProcesing(true);
@@ -35,6 +36,7 @@ function Checkout() {
       total: cartTotalPrice(),
       date: new Date(),
     };
+    console.log("orden creada");
     const OrderId = await createOrder(Order);
     cleanCart();
     setTimeout(() => {
@@ -42,12 +44,19 @@ function Checkout() {
     }, 3000);
   }
 
+  //Guarda en el estado los valores de los input del formulario
   function handleOnChange(e) {
     const inputName = e.target.name;
     const copyOfBuyerData = { ...buyerData };
     copyOfBuyerData[inputName] = e.target.value;
     setBuyerData(copyOfBuyerData);
   }
+
+  let disabled =
+    buyerData.name === "" ||
+    buyerData.surname === "" ||
+    buyerData.email === "" ||
+    buyerData.phone === "";
 
   if (procesing) {
     return (
@@ -118,7 +127,7 @@ function Checkout() {
           <Link to="/cart">
             <Button text="Volver al carrito" show="normal" />
           </Link>
-          <Button text="Finalizar compra" show="bigger" />
+          <Button disabled={disabled} text="Finalizar compra" show="bigger" />
         </div>
       </form>
     </div>

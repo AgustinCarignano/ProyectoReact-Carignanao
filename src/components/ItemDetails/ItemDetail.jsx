@@ -9,6 +9,7 @@ function ItemDetail({ product }) {
   const [addOption, setaddOption] = React.useState(true);
   const { addToCart, itemQuantity } = useContext(cartContext);
 
+  //Función para ejecutar la carga al carrito del item y mostrar el botón para dirijirse al mismo
   function addedToCart(cant) {
     setaddOption(false);
     addToCart(product, cant);

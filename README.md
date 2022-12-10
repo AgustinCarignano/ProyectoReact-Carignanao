@@ -1,70 +1,63 @@
-# Getting Started with Create React App
+<h1 align="center"> Tyrion Drink Shop - React Project </h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Tyrion es un E-commerce de bebidas alcohólicas, creado como proyecto final para el curso de React JS, impartido por Coderhause.
 
-## Available Scripts
+## Breve descripción.
 
-In the project directory, you can run:
+La aplicación consta de un contenedor principal con todos los productos disponibles en la tienda. A partir de las cards de cada item, es posible acceder a una descripción detallada del mismo, y añadir productos a un carrito de compras.
 
-### `npm start`
+Desde el menú de navegación se pueden seleccionar diferentes categorías de bebidas, o realizar un búsqueda por nombre de un producto.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Desde el carrito de compras, el usuario tiene la posibilidad de agregar o quitar items, y enviar una orden de compra luego de rellenar un breve formulario con sus datos personales.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+![Breve visualización de la webApp](https://i.imgur.com/AGacAq7.gif)
+
+## Características del proyecto
+
+- Este proyecto fue iniciado con [Create React App](https://github.com/facebook/create-react-app).
+
+- Para la navegabilidad de la página, se utlizó [React-router-dom](https://reactrouter.com/en/main)
+
+- Para la base se datos, se utilizó el servicio de [Firebase](https://firebase.google.com/).
+
+## Deploy del proyecto
+
+Para visualizar la aplicación, haz click en el siguiente enlace: [Tyrion - Drink Shop](https://google.com)
+
+# Instalación
+
+### Descargue una copia del repositorio:
+
+    git clone https://github.com/AgustinCarignano/ProyectoReact-Carignanao.git
+
+### Instale las dependencias necesarias para poder ejecutar la aplicación:
+
+    npm install
+
+### Corra la aplicación en modo desarrollo:
+
+    npm start
+
+La página se recargará automáticamente cuando se realicen cambios.
+
+Sí el navegador no se abre automáticamente, puede visualizar la aplicación haciendo click en el enlace: [http://localhost:3000](http://localhost:3000)
+
+## Otros scrips disponibles
 
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Ingresa a [running tests](https://facebook.github.io/create-react-app/docs/running-tests) para más información.
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Ingresa a [deployment](https://facebook.github.io/create-react-app/docs/deployment) para más información.
 
 ### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+**Importante: una vez ejecutado el comando `eject`, no se puede volver atrás.**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Créditos
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Profesor: Salkin, Santiago
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Alumno: Carignano, Agustín.

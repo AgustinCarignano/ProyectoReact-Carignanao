@@ -15,6 +15,12 @@
     cursor: pointer;
 }
 
+.btn:disabled {
+    color: grey;
+    background-color: rgba(128, 128, 128, 0.46);
+    font-size: 1rem;
+}
+
 .btn-smaller {
     font-size: 0.7rem;
 }

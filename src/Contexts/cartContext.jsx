@@ -5,6 +5,7 @@ export const cartContext = createContext([]);
 export function CartContextProvider({ children }) {
   const [cart, setCart] = useState([]);
 
+  //Agrega un item al carrito, agregandole la propiedad "cantidad". Si ya existe, solo modifica la cantidad del item en el carrito
   function addToCart(item, cant) {
     let auxCart = [...cart];
     let alreadyExist = auxCart.some((el) => el.id === item.id);
@@ -18,19 +19,23 @@ export function CartContextProvider({ children }) {
     setCart(auxCart);
   }
 
+  //Obtiene la cantidad de productos (distintos o iguales) en el carrito
   function totalItemsInCart() {
     return cart.reduce((sum, el) => sum + el.cantidad, 0);
   }
 
+  //Obtiene la cantidad del item en el carrito para iniciar el "itemCount" con este valor si es que ya está cargado en el carrito
   function itemQuantity(item) {
     let init = cart.find((el) => el.id === item.id);
     return init ? init.cantidad : 1;
   }
 
+  //Obtiene el valor total de los items en el carrito
   function cartTotalPrice() {
     return cart.reduce((sum, el) => sum + el.precioActual * el.cantidad, 0);
   }
 
+  //Elimina un item del carrito
   function deleteItem(id) {
     let auxCart = [...cart];
     let index = auxCart.findIndex((el) => el.id === id);
@@ -38,6 +43,7 @@ export function CartContextProvider({ children }) {
     setCart(auxCart);
   }
 
+  //Elimina todos los elementos del carrito
   function cleanCart() {
     setCart([]);
   }

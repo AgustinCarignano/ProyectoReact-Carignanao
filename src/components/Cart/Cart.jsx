@@ -15,6 +15,7 @@ function Cart() {
     addToCart,
   } = useContext(cartContext);
 
+  //Aumenta la cantidad del item en el carrito
   function addToCartFromCart(item, cant) {
     if (item.cantidad !== cant) {
       addToCart(item, cant);
@@ -48,7 +49,7 @@ function Cart() {
           <div className="cart-item" key={item.id}>
             <div className="item-product">
               <div className="product-img">
-                <img src={item.imgurl}></img>
+                <img src={item.imgurl} alt={item.title}></img>
               </div>
               <div className="product-title">
                 <h3>{item.title}</h3>
