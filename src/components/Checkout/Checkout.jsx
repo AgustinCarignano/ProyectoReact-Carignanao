@@ -63,7 +63,9 @@ function Checkout() {
       <div className="procesing">
         <h3>Estamos generando su pedido</h3>
         <Loader />
-        <p>Guarde el ID para poder realizar el seguimiento</p>
+        <p>
+          Podrá luego realizar el seguimiento con el ID de la compra o su Email
+        </p>
         <small>El proceso solo tomará unos segundos...</small>
       </div>
     );

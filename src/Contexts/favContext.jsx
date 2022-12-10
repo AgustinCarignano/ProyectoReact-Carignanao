@@ -3,7 +3,9 @@ import { createContext, useState } from "react";
 export const favContext = createContext([]);
 
 export function FavContextProvider({ children }) {
-  const [favList, setFavList] = useState([]);
+  const [favList, setFavList] = useState(
+    JSON.parse(localStorage.getItem("favList")) || []
+  );
 
   //Agregar o quitar de favoritos un producto.
   function putInFav(product) {
@@ -16,6 +18,12 @@ export function FavContextProvider({ children }) {
       auxFavList.splice(index, 1);
     }
     setFavList(auxFavList);
+    localStorageCart(auxFavList);
+  }
+
+  //función para almacenar en la memoria de la sesión los elementos agregados a favoritos
+  function localStorageCart(list) {
+    localStorage.setItem("favList", JSON.stringify(list));
   }
 
   return (

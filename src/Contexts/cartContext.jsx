@@ -3,7 +3,9 @@ import { createContext, useState } from "react";
 export const cartContext = createContext([]);
 
 export function CartContextProvider({ children }) {
-  const [cart, setCart] = useState([]);
+  const [cart, setCart] = useState(
+    JSON.parse(localStorage.getItem("cart")) || []
+  );
 
   //Agrega un item al carrito, agregandole la propiedad "cantidad". Si ya existe, solo modifica la cantidad del item en el carrito
   function addToCart(item, cant) {
@@ -17,6 +19,7 @@ export function CartContextProvider({ children }) {
       auxCart.push(item);
     }
     setCart(auxCart);
+    localStorageCart(auxCart);
   }
 
   //Obtiene la cantidad de productos (distintos o iguales) en el carrito
@@ -41,11 +44,18 @@ export function CartContextProvider({ children }) {
     let index = auxCart.findIndex((el) => el.id === id);
     auxCart.splice(index, 1);
     setCart(auxCart);
+    localStorageCart(auxCart);
   }
 
   //Elimina todos los elementos del carrito
   function cleanCart() {
     setCart([]);
+    localStorageCart([]);
+  }
+
+  //función para almacenar en la memoria de la sesión los elementos cargados al carrito
+  function localStorageCart(cart) {
+    localStorage.setItem("cart", JSON.stringify(cart));
   }
 
   return (

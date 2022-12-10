@@ -22,7 +22,7 @@ Desde el carrito de compras, el usuario tiene la posibilidad de agregar o quitar
 
 ## Deploy del proyecto
 
-Para visualizar la aplicación, haz click en el siguiente enlace: [Tyrion - Drink Shop](https://google.com)
+Para visualizar la aplicación, haz click en el siguiente enlace: [Tyrion - Drink Shop](https://proyecto-react-carignanao.vercel.app/)
 
 # Instalación
 

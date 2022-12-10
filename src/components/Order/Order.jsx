@@ -37,7 +37,7 @@ function Order(props) {
   ) : (
     <div className="order">
       <h2 className="order-title">
-        ID de seguimiento: <small>{props.orderId}</small>
+        ID de la orden: <small>{props.orderId}</small>
       </h2>
       <div className="order-detail">
         <div>
