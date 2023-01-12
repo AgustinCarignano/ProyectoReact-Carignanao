@@ -20,13 +20,13 @@ Desde el carrito de compras, el usuario tiene la posibilidad de agregar o quitar
 
 ## Deploy del proyecto
 
-Para visualizar la aplicación, haz click en el siguiente enlace: [Tyrion - Drink Shop](https://proyecto-react-carignanao.vercel.app/)
+Para visualizar la aplicación, haz click en el siguiente enlace: [Tyrion - Drink Shop](https://proyecto-react-carignano.vercel.app/)
 
 # Instalación
 
 ### Descargue una copia del repositorio:
 
-    git clone https://github.com/AgustinCarignano/ProyectoReact-Carignanao.git
+    git clone https://github.com/AgustinCarignano/ProyectoReact-Carignano.git
 
 ### Instale las dependencias necesarias para poder ejecutar la aplicación:
 
